@@ -1,0 +1,19 @@
+<h2>Welcome, Admin</h2>
+
+<h3>Domains</h3>
+<ul>
+  <% stores.forEach(store => { %>
+    <li>
+      <strong><%= store.store_name %></strong> - 
+      <a href="/files/<%= store.id %>">Manage Files</a> |
+      <a href="http://<%= store.custom_domain %>" target="_blank">Visit</a>
+    </li>
+  <% }) %>
+</ul>
+
+<h3>Add New Domain</h3>
+<form action="/files/add-store" method="POST">
+  <input type="text" name="store_name" placeholder="Store Name" required />
+  <input type="text" name="custom_domain" placeholder="custom.domain.com" required />
+  <button type="submit">Add Domain</button>
+</form>

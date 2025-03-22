@@ -1,13 +1,17 @@
 {
   "dependencies": {
-    "aws-sdk": "^2.1692.0",
+    "@aws-sdk/client-s3": "^3.772.0",
+    "@aws-sdk/s3-request-presigner": "^3.772.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
+    "express-session": "^1.18.1",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.2",
+    "multer-s3-v3": "^33.0.12",
+    "nodeman": "^1.1.2",
     "pg": "^8.14.1"
   },
   "name": "file-delivery-app",
@@ -19,5 +23,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.8"
+  }
 }

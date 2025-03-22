@@ -1,0 +1,15 @@
+<h2>Files for <%= store.store_name %> (<%= store.custom_domain %>)</h2>
+
+<form action="/files/upload/<%= store.id %>" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file" required />
+  <button type="submit">Upload File</button>
+</form>
+
+<ul>
+  <% files.forEach(file => { %>
+    <li>
+      <%= file.file_name %> -
+      <a href="/files/preview/<%= file.id %>">Preview</a>
+    </li>
+  <% }) %>
+</ul>
